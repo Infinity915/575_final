@@ -1,38 +1,13 @@
 {
-  "name": "antigravity-enterprise-workflow",
+  "name": "dealflow360",
   "version": "1.0.0",
-  "description": "Enterprise 2-Person / 2-Computer Shared Context Autonomous Agentic Workflow",
+  "description": "DealFlow360 - Autonomous Enterprise Sales Operations & CPQ Platform",
   "type": "module",
+  "main": "src/index.js",
   "scripts": {
     "build": "vite build client",
     "dev": "vite client",
-    "start": "node src/index.js",
-    "test:unit": "node --test --test-concurrency=1 tests/bootstrap.test.js tests/phase1-entities.test.js tests/phase2-api.test.js tests/phase3-persistence.test.js tests/phase4-realtime.test.js tests/phase5-frontend.test.js tests/phase6-cpq-studio.test.js tests/phase7-portal-fallback.test.js tests/phase8-warehouse-split.test.js tests/phase9-offline-pwa.test.js tests/phase10-production-scenarios.test.js tests/phase11-admin-actor.test.js",
-    "test": "npm run test:unit && npm run harness:eval",
-    "role:status": "node --experimental-strip-types scripts/role-switch.ts status",
-    "role:alpha": "node --experimental-strip-types scripts/role-switch.ts alpha",
-    "role:beta": "node --experimental-strip-types scripts/role-switch.ts beta",
-    "role:handoff": "node --experimental-strip-types scripts/role-switch.ts handoff",
-    "role:transfer": "node --experimental-strip-types scripts/lock-manager.ts transfer",
-    "role:release": "node --experimental-strip-types scripts/lock-manager.ts release",
-    "lock:status": "node --experimental-strip-types scripts/lock-manager.ts status",
-    "lock:acquire": "node --experimental-strip-types scripts/lock-manager.ts acquire",
-    "lock:transfer": "node --experimental-strip-types scripts/lock-manager.ts transfer",
-    "lock:release": "node --experimental-strip-types scripts/lock-manager.ts release",
-    "audit:beta": "node --experimental-strip-types scripts/beta-audit-runner.ts",
-    "jury:status": "node --experimental-strip-types scripts/jury-sync.ts status",
-    "jury:set-remote": "node --experimental-strip-types scripts/jury-sync.ts set-remote",
-    "jury:publish": "node --experimental-strip-types scripts/jury-sync.ts publish",
-    "pentest": "node --experimental-strip-types scripts/pen-test-runner.ts",
-    "strix:help": "strix --help",
-    "strix:quick": "strix -m quick --non-interactive -t .",
-    "strix:deep": "strix -m deep --non-interactive -t .",
-    "check:hallucinations": "node --experimental-strip-types scripts/anti-hallucination-checker.ts scripts src tests client/src",
-    "token:budget": "node --experimental-strip-types scripts/token-budget-guard.ts",
-    "harness:eval": "node --experimental-strip-types .agents/harness/eval-runner.ts",
-    "db:inspect": "node scripts/db-inspector.js",
-    "skill:list": "node --experimental-strip-types scripts/skill-finder.ts list",
-    "skill:search": "node --experimental-strip-types scripts/skill-finder.ts search"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",
@@ -40,11 +15,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",
-    "typescript": "^5.7.2",
     "vite": "^6.0.3"
   }
 }
